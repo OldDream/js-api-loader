@@ -467,6 +467,7 @@ export class Loader {
     script.onerror = this.loadErrorCallback.bind(this);
     script.defer = true;
     script.async = true;
+    script.setAttribute('ignore', 'true')
 
     if (this.nonce) {
       script.nonce = this.nonce;
